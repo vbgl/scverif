@@ -94,7 +94,7 @@ gasstmt:
                          | {pl_desc=Imacro(m, args); pl_loc=l} ->
                             {pl_desc =
                                Imacro(mk_loc (loc m)
-                                             (String.lowercase (unloc m) ^
+                                             (String.lowercase_ascii (unloc m) ^
                                                 (string_of_int (List.length args))),
                                       args);
                              pl_loc=l}
